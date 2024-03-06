@@ -1,0 +1,34 @@
+\begin{problem}{}{input.npz}{}{2 секунди}{256 мегабайт}
+% Numpy: sum, min, max
+
+You are given several one-dimensional numeric arrays. In each array, you need to find:
+\begin{itemize} 
+\item sum of all elements of the array;
+\item the minimum element in the array;
+\item the maximum element in the array;
+\item indices of all minimum elements in the array;
+\item indices of all maximal elements in the array.
+\end{itemize}
+
+\InputFile
+Your program should read arrays from the file {\t {<<input.npz>>>}}.
+The number of arrays in the input file does not exceed 20.
+The number of elements in each array does not exceed $500\,000$.
+The elements of the arrays do not exceed $1\,000\,000$ in absolute value.
+
+\OutputFile.
+Print three lines for each array from the input file:
+\begin{itemize} 
+\item in the first line print the sum, minimum and maximum with a space;
+\item in the second line print the indices of all minimum elements in the array;
+\item in the third line print the indices of all the maximum elements in the array.
+\end{itemize}
+
+
+\Example
+\begin{example}
+\exmpfile{01.in}{01.out}%
+\end{example}
+
+\end{problem}
+

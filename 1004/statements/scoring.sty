@@ -1,0 +1,32 @@
+\ProvidesPackage{scoring}
+
+\newcounter{score}
+
+\newenvironment{scoring}[1]{
+\def\dupc(##1|##2){c|\ifx\relax##2\relax\else\dupc(##2)\fi}
+\def\countargs(##1|##2|##3){\ifx\relax##3\relax##1\relax\else\countargs(\number\numexpr##1+1\relax|##3)\fi}
+\def\pcolumns(##1|##2){##1&\ifx\relax##2\relax\else\pcolumns(##2)\fi}
+\setcounter{score}{0}
+\newcommand{\scoresubtask}[4]{\stepcounter{score}\arabic{score}&##1&\pcolumns(##2|)##3&##4\\\hline}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|c|c|\dupc(#1|)c|c|}
+\hline
+&
+& \multicolumn{\countargs(1|#1|)}{|c|}{Ограничения} 
+& 
+& \\
+\cline{3-\countargs(3|#1|)}
+\raisebox{2.25ex}[0cm][0cm]{Подзадача}
+& \raisebox{2.25ex}[0cm][0cm]{Баллы}
+& \pcolumns(#1|)
+\raisebox{2.25ex}[0cm][0cm]{\parbox{3cm}{\centering Необходимые подзадачи}}
+& \raisebox{2.25ex}[0cm][0cm]{\parbox{3cm}{\centering Примечание}}
+\\
+\hline
+}{
+\end{tabular}
+\end{center}
+}
+

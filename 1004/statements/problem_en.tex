@@ -1,0 +1,56 @@
+\begin{problem}{}{}{}{0.2 seconds}{256 megabytes}
+% Numpy: poly
+
+
+Let $P$ $-$ be a polynomial of degree $n$, i.e.
+$$
+  P(x) = c_n \cdot x^n + c_{n-1} \cdot x^{n-1} + c_{n-2} \cdot x^{n-2} + \dots + c_{1} \cdot x^{1} + c_{0} 
+$$
+
+
+You know that this polynomial has exactly $n$ real roots.
+Write a program using the \texttt{Numpy} library that
+\begin{enumerate}
+ \item Find the coefficients $c_n, c_{n-1}, c_{n-2}, c_{1}, c_{0}$.
+ \item Calculate the values of the given polynomial at the points $t_1, t_2, ..., t_k$.
+ \item Calculate the values of the derivative of a given polynomial at the points $t_1, t_2, ..., t_k$.
+\end{enumerate}
+
+
+
+
+\InputFile
+The first line of input specifies the number $n$ $-$ the degree of the polynomial.
+The second line contains $n$ real numbers $x_1, x_2, ..., x_k$ $-$ roots of the polynomial.
+
+The third line contains $k$ $-$ the number of points at which to compute the values of the polynomial.
+The fourth line contains $k$ real numbers $t_1, t_2, ..., t_k$ $-$ points at which the values of the polynomial should be calculated.
+
+
+\OutputFile
+In the first line print $n$ real numbers $c_n,\; c_{n-1}, \; c_{n-2}, \; ..., \; c_{1}, \; c_{0}$ $-$ coefficients of the polynomial.
+In the second line print $k$ of real numbers: $P(t_1), \; P(t_2),\; ...,\; P(t_k)$.
+In the third line print $k$ real numbers: $P^\prime(t_1),\; P^\prime(t_2), \; ..., \; P^\prime(t_k)$.
+
+
+The absolute error of computation should not exceed $10^{-5}$.
+
+
+\Constraints
+$2 \le n \le 10$.
+
+$-10.0 \le x_i \le 10.0$.
+
+$1 \le k \le $10.
+
+$10.0 \le t_i \le $10.0.
+
+\Examples
+\begin{example}
+\exmpfile{01.in}{01.out}%
+\exmpfile{02.in}{02.out}%
+\end{example}
+
+
+\end{problem}
+

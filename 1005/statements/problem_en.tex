@@ -1,0 +1,42 @@
+\begin{problem}{}{}{}{0.2 seconds}{256 megabytes}
+% Numpy: linalg
+
+An integer matrix $A_{n\times m}$ consisting of $n$ rows and $m$ columns is given:
+$$
+A_{n\times m} = \begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1m} \\
+a_{21} & a_{22} & \cdots & a_{2m} \\
+\vdots & \vdots & \ddots & \vdots.
+a_{n1} & a_{n2} & \cdots & a_{nm}
+\end{bmatrix}
+$$
+It is known that $|n - m| = 2$.
+
+Write a program that removes two rows or two columns from the matrix $A$ so that the square matrix $B$ with the maximum determinant is obtained.
+If there are several ways to remove two rows or two columns so that the square matrix $B$ with maximum determinant is obtained, you can choose any of them.
+
+
+\InputFile
+Your program receives matrix $A$ with the number of rows and the number of columns differing by 2.
+
+\OutputFile
+In the first line print the number $n$ $-$ the dimension of the square matrix $B$ with the maximum determinant, 
+which is obtained from matrix $A$ by deleting two rows or two columns. 
+
+In the next $n$ rows output matrix $B$.
+In the last line print the determinant of matrix $B$.
+
+\Constraints
+
+$2 \le n \le 10$
+
+$-10 \le a_{ij} \le 10$
+
+\Examples
+\begin{example}
+\exmpfile{01.in}{01.out}%
+\exmpfile{02.in}{02.out}%
+\end{example}
+
+\end{problem}
+
