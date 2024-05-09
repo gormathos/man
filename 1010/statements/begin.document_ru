@@ -1,0 +1,25 @@
+\documentclass [10pt, a4paper, oneside] {article}
+\usepackage{cmap}
+\usepackage [T2A] {fontenc}
+\usepackage [utf8] {inputenc}
+\usepackage [english, russian] {babel}
+\usepackage {amsmath}
+\usepackage {amssymb}
+\usepackage [russian]{pngolymp_ru}
+\usepackage {comment}
+\usepackage {scoring}
+\usepackage {epigraph}
+\usepackage {expdlist}
+\usepackage {graphicx}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\geometry{papersize={23 cm, 155 cm}}
+
+\pagestyle{empty}
+
+\usepackage{ifpdf}
+\ifpdf
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+
+\begin {document}
